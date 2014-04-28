@@ -22,6 +22,7 @@
 		5CB7DF2C190F02B000707FF1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5CB7DF2A190F02B000707FF1 /* InfoPlist.strings */; };
 		5CB7DF2E190F02B000707FF1 /* CocoaPodsDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB7DF2D190F02B000707FF1 /* CocoaPodsDemoTests.m */; };
 		5CB7DF38190F046A00707FF1 /* binoculars-telescope.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5CB7DF37190F046A00707FF1 /* binoculars-telescope.jpg */; };
+		5CB7DF42190F19C600707FF1 /* libMBProgressHUD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB7DF41190F198C00707FF1 /* libMBProgressHUD.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 5CB7DEFE190F02B000707FF1;
 			remoteInfo = CocoaPodsDemo;
+		};
+		5CB7DF40190F198C00707FF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5CB7DF3C190F198C00707FF1 /* MBProgressHUD.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D286A7491518C70F00E13FB8;
+			remoteInfo = MBProgressHUD;
+		};
+		5CB7DF43190F19DC00707FF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5CB7DF3C190F198C00707FF1 /* MBProgressHUD.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D286A7481518C70F00E13FB8;
+			remoteInfo = MBProgressHUD;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -55,6 +70,7 @@
 		5CB7DF2B190F02B000707FF1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5CB7DF2D190F02B000707FF1 /* CocoaPodsDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CocoaPodsDemoTests.m; sourceTree = "<group>"; };
 		5CB7DF37190F046A00707FF1 /* binoculars-telescope.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "binoculars-telescope.jpg"; sourceTree = "<group>"; };
+		5CB7DF3C190F198C00707FF1 /* MBProgressHUD.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MBProgressHUD.xcodeproj; path = ../external/MBProgressHUD/MBProgressHUD.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CB7DF42190F19C600707FF1 /* libMBProgressHUD.a in Frameworks */,
 				5CB7DF05190F02B000707FF1 /* CoreGraphics.framework in Frameworks */,
 				5CB7DF07190F02B000707FF1 /* UIKit.framework in Frameworks */,
 				5CB7DF03190F02B000707FF1 /* Foundation.framework in Frameworks */,
@@ -84,6 +101,7 @@
 		5CB7DEF6190F02B000707FF1 = {
 			isa = PBXGroup;
 			children = (
+				5CB7DF3C190F198C00707FF1 /* MBProgressHUD.xcodeproj */,
 				5CB7DF08190F02B000707FF1 /* CocoaPodsDemo */,
 				5CB7DF27190F02B000707FF1 /* CocoaPodsDemoTests */,
 				5CB7DF01190F02B000707FF1 /* Frameworks */,
@@ -155,6 +173,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		5CB7DF3D190F198C00707FF1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5CB7DF41190F198C00707FF1 /* libMBProgressHUD.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -169,6 +195,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				5CB7DF44190F19DC00707FF1 /* PBXTargetDependency */,
 			);
 			name = CocoaPodsDemo;
 			productName = CocoaPodsDemo;
@@ -219,6 +246,12 @@
 			mainGroup = 5CB7DEF6190F02B000707FF1;
 			productRefGroup = 5CB7DF00190F02B000707FF1 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 5CB7DF3D190F198C00707FF1 /* Products */;
+					ProjectRef = 5CB7DF3C190F198C00707FF1 /* MBProgressHUD.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				5CB7DEFE190F02B000707FF1 /* CocoaPodsDemo */,
@@ -226,6 +259,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		5CB7DF41190F198C00707FF1 /* libMBProgressHUD.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libMBProgressHUD.a;
+			remoteRef = 5CB7DF40190F198C00707FF1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		5CB7DEFD190F02B000707FF1 /* Resources */ = {
@@ -275,6 +318,11 @@
 			isa = PBXTargetDependency;
 			target = 5CB7DEFE190F02B000707FF1 /* CocoaPodsDemo */;
 			targetProxy = 5CB7DF25190F02B000707FF1 /* PBXContainerItemProxy */;
+		};
+		5CB7DF44190F19DC00707FF1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MBProgressHUD;
+			targetProxy = 5CB7DF43190F19DC00707FF1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -461,6 +509,7 @@
 				5CB7DF33190F02B000707FF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5CB7DF34190F02B000707FF1 /* Build configuration list for PBXNativeTarget "CocoaPodsDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +518,7 @@
 				5CB7DF36190F02B000707FF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
