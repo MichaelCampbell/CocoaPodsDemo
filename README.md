@@ -15,3 +15,6 @@ git submodule add https://github.com/jdg/MBProgressHUD.git external/MBProgressHU
 ```
 
 Now let's add the MBProgressHUD source to our Project, using the Static Library approach found [here](https://github.com/jdg/MBProgressHUD#static-library).
+
+##Note
+You must run two commands: ```git submodule init``` to initialize your local configuration file, and ```git submodule update``` to fetch all data from submodules listed in your superproject:
