@@ -7,9 +7,9 @@ Instructions on how to add a git submodule can be found [here](http://git-scm.co
 ```sh
 #clone the repo
 git clone https://github.com/MichaelCampbell/CocoaPodsDemo.git --branch gitSubModule
-#go into your newly download source code folder
+#go into your newly downloaded source code folder
 cd CocoaPodsDemo
-#add the MBProgressHUD git submodule to our local repo
+#add the MBProgressHUD git submodule to your local repo
 git submodule add https://github.com/jdg/MBProgressHUD.git external/MBProgressHUD
 
 ```
