@@ -7,6 +7,7 @@
 //
 
 #import "MCViewController.h"
+#import <MBProgressHUD/MBProgressHUD.h>
 
 @interface MCViewController ()
 
@@ -28,7 +29,14 @@
 
 - (IBAction)loadPhotoButtonPressed:(UIButton *)sender
 {
-    //Let's pretend it's doing a really long network call to fetch the photo
-    [NSThread sleepForTimeInterval:5.0];
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+        //Let's pretend it's doing a really long network call to fetch the photo
+        [NSThread sleepForTimeInterval:5.0];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+        });
+    });
+    
 }
 @end
