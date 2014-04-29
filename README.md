@@ -37,3 +37,11 @@ open CocoaPodsDemo.xcworkspace
 * The ```pod install``` command may fail if the Podfile is not in the same directory as the **xcodeproj** file.
 * From now on be sure to open up the **workspace** file. In our case, it should be called *CocoaPodsDemo.xcworkspace*.
 * The ```Podfile```, ```Podfile.lock```, and ```.xcworkspace``` directory files **should** be committed. It is up to debate whether the contents of the ```pods/``` directory should be committed. Read about it [here](http://guides.cocoapods.org/using/using-cocoapods.html#should-i-ignore-the-pods-directory-in-source-control)
+
+
+##More
+The spec files can be found [here](https://github.com/CocoaPods/Specs).
+
+A sample ```.podspec``` can be found [here](https://github.com/jdg/MBProgressHUD/blob/master/MBProgressHUD.podspec).
+
+Learn more about managing version of pods [here](http://guides.cocoapods.org/syntax/podfile.html#pod)
